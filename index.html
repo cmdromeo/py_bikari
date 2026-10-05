@@ -3,224 +3,233 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BIKARI · Productos de limpieza para casa y auto</title>
-<meta name="description" content="Productos de limpieza BIKARI para el hogar, la empresa y el auto. Arma tu pedido y envíalo por WhatsApp.">
+<title>BIKARI · Limpieza para casa y auto</title>
+<meta name="description" content="Productos de limpieza BIKARI para el hogar y el auto, con precio unitario y por mayor. Arma tu pedido y envíalo por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --rojo:#D7141A; --rojo-osc:#A80E13;
-  --amarillo:#FFD400;
-  --grafito:#202227; --grafito-2:#2E3138; --grafito-3:#43474F;
-  --hielo:#F2F5F8; --blanco:#FFFFFF;
-  --azul:#0F4FB8;
+  --rojo:#D9131B; --rojo-osc:#9E0B11;
+  --oro:#FFC81E; --oro-claro:#FFE680; --oro-osc:#C98A00;
+  --azul:#0B4CC2; --azul-osc:#062B78; --azul-noche:#041A4D; --celeste:#E8F2FF;
+  --negro:#0C0D10; --carbon:#17191E; --carbon-2:#23262D; --linea-osc:#353943;
   --wsp:#1A9E4B; --wsp-osc:#137A39;
-  --texto:#1C1E22; --texto-2:#5A606B;
-  --borde:#DCE2EA;
-  --radio:14px;
-  --display:"Chakra Petch", system-ui, sans-serif;
+  --texto:#151820; --texto-2:#59606D; --borde:#D9E2EE;
+  --radio:16px;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
   --cuerpo:"Figtree", system-ui, sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;font-family:var(--cuerpo);color:var(--texto);background:var(--blanco);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:var(--cuerpo);color:var(--texto);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--azul);outline-offset:3px;border-radius:6px}
-.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.01em}
-h2{font-size:clamp(30px,4.4vw,48px)}
-.lead{font-size:clamp(17px,1.6vw,20px);color:var(--texto-2);max-width:58ch}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(38px,5.6vw,64px);font-style:italic;text-transform:uppercase}
+.lead{font-size:clamp(17px,1.6vw,19px);max-width:60ch;margin:12px 0 0}
+
+/* Texto dorado de los afiches */
+.oro{background:linear-gradient(180deg,var(--oro-claro) 0%,var(--oro) 45%,var(--oro-osc) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* ---------- Botones ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 24px;font-weight:700;font-size:17px;text-decoration:none;transition:background .15s, transform .1s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;padding:14px 24px;font-weight:800;font-size:17px;text-decoration:none;transition:background .15s,transform .1s}
 .btn:active{transform:scale(.98)}
+.btn svg{width:22px;height:22px;flex:none}
 .btn-wsp{background:var(--wsp);color:#fff}
 .btn-wsp:hover{background:var(--wsp-osc)}
-.btn-linea{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
-.btn-linea:hover{background:rgba(0,0,0,.05)}
-.btn svg{width:22px;height:22px;flex:none}
+.btn-oro{background:linear-gradient(180deg,var(--oro-claro),var(--oro) 55%,#F0A800);color:var(--negro)}
+.btn-oro:hover{filter:brightness(1.05)}
+.btn-borde{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75)}
+.btn-borde:hover{background:rgba(255,255,255,.1)}
 
 /* ---------- Header ---------- */
-.top{position:sticky;top:0;z-index:40;background:var(--grafito);color:#fff}
-.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.top{position:sticky;top:0;z-index:40;background:var(--negro);color:#fff;border-bottom:3px solid var(--rojo)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:64px}
 .marca{display:flex;align-items:center;gap:10px;text-decoration:none}
-.marca img{width:44px;height:44px;border-radius:8px}
-.marca span{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.06em;color:var(--amarillo)}
+.marca img{width:42px;height:42px;border-radius:8px}
+.marca span{font-family:var(--display);font-weight:900;font-style:italic;font-size:30px;letter-spacing:.02em}
 .top nav{display:flex;gap:22px;margin-left:auto}
-.top nav a{text-decoration:none;font-weight:600;font-size:15px;opacity:.85}
-.top nav a:hover{opacity:1;color:var(--amarillo)}
-.btn-carro{position:relative;display:flex;align-items:center;gap:8px;background:var(--amarillo);color:var(--grafito);border:0;border-radius:999px;padding:9px 16px;font-weight:700;font-size:15px}
+.top nav a{text-decoration:none;font-weight:700;font-size:15px;opacity:.85}
+.top nav a:hover{opacity:1;color:var(--oro)}
+.btn-carro{display:flex;align-items:center;gap:8px;border:0;border-radius:10px;padding:9px 14px;font-weight:800;font-size:15px}
 .btn-carro .num{background:var(--rojo);color:#fff;border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:13px;padding:0 6px}
-@media (max-width:860px){.top nav{display:none}.btn-carro{margin-left:auto}}
+@media (max-width:900px){.top nav{display:none}.btn-carro{margin-left:auto}}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;background:var(--hielo);overflow:hidden}
-.franja{position:absolute;inset:0 0 auto 0;height:clamp(120px,13vw,170px);background:var(--rojo);clip-path:polygon(0 0,100% 0,100% 30%,0 100%)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:56px 0 64px}
-.hero h1{font-size:clamp(40px,6.2vw,76px);color:var(--grafito)}
-.hero h1 .nombre{display:block;color:var(--amarillo);-webkit-text-stroke:2px var(--rojo-osc);paint-order:stroke fill;font-size:1.25em;letter-spacing:.04em;margin-bottom:10px;text-shadow:0 4px 0 rgba(0,0,0,.18)}
-.hero .lead{margin:22px 0 30px}
-.hero .acciones{display:flex;flex-wrap:wrap;gap:12px}
-.hero .acciones .btn-linea{color:var(--grafito)}
-.hero-img{position:relative}
-.hero-img img{border-radius:22px;box-shadow:0 30px 60px -25px rgba(20,25,40,.45);aspect-ratio:1/1;object-fit:cover;width:100%}
-.hero-img figcaption{position:absolute;left:-14px;bottom:22px;background:var(--grafito);color:#fff;padding:10px 16px;border-radius:12px;font-size:15px;max-width:240px;line-height:1.35}
-.hero-img figcaption b{color:var(--amarillo);font-family:var(--display)}
-.datos{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;padding:0;list-style:none;color:var(--texto-2);font-size:15px}
-.datos li{display:flex;align-items:center;gap:8px}
-.datos li::before{content:"";width:10px;height:10px;background:var(--rojo);transform:skewX(-20deg)}
-@media (max-width:860px){
-  .hero .wrap{grid-template-columns:1fr;padding:36px 0 48px;gap:32px}
-  .hero-img{order:-1;max-width:300px;margin-inline:auto}
-  .hero-img figcaption{left:12px}
-  .franja{height:96px}
+.hero{position:relative;overflow:hidden;color:#fff;background:
+  radial-gradient(ellipse 60% 70% at 78% 40%,rgba(41,128,255,.55),transparent 70%),
+  linear-gradient(160deg,var(--azul) 0%,var(--azul-osc) 55%,var(--azul-noche) 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:90px;background:var(--negro);clip-path:polygon(0 70%,100% 0,100% 100%,0 100%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;padding:48px 0 110px}
+.cinta{display:inline-block;background:linear-gradient(90deg,var(--rojo-osc),var(--rojo) 40%,var(--rojo));padding:6px 46px 4px 20px;clip-path:polygon(0 0,100% 0,90% 100%,0 100%);margin-bottom:18px}
+.cinta span{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(46px,7vw,84px);line-height:1;letter-spacing:.01em;display:block;filter:drop-shadow(0 3px 0 rgba(0,0,0,.35))}
+.hero h1{font-size:clamp(40px,5.6vw,68px);font-style:italic;text-transform:uppercase;text-shadow:0 3px 18px rgba(0,0,0,.35)}
+.hero .lead{color:#DCE8FF}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.sellos{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.sellos li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
+.hero-img{position:relative;margin:0}
+.hero-img img{border-radius:24px;width:100%;aspect-ratio:1/1;object-fit:cover;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);border:4px solid rgba(255,255,255,.18)}
+.hero-img figcaption{position:absolute;right:-10px;bottom:24px;background:var(--rojo);padding:8px 16px;border-radius:10px;font-weight:700;font-size:15px;transform:rotate(-2deg);box-shadow:0 8px 20px -6px rgba(0,0,0,.5)}
+@media (max-width:880px){
+  .hero .wrap{grid-template-columns:1fr;padding:32px 0 96px;gap:28px}
+  .hero-img{max-width:320px;margin-inline:auto;order:-1}
+  .hero-img figcaption{right:8px}
 }
 
-/* ---------- Selector de línea ---------- */
-.lineas{padding:56px 0 8px}
-.lineas .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.linea{position:relative;display:flex;align-items:flex-end;min-height:220px;border-radius:var(--radio);overflow:hidden;text-decoration:none;color:#fff;padding:24px;isolation:isolate}
-.linea img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .4s}
-.linea::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(10,12,18,.85))}
-.linea:hover img{transform:scale(1.04)}
-.linea h3{font-size:30px}
-.linea p{margin:4px 0 0;opacity:.9;font-size:15px}
-@media (max-width:640px){.lineas .grid{grid-template-columns:1fr}.linea{min-height:170px}}
+/* ---------- Ofertas / packs ---------- */
+.ofertas{background:var(--negro);color:#fff;padding:24px 0 80px}
+.ofertas .cabeza{margin-bottom:30px}
+.ofertas .lead{color:#B8BDC8}
+.packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.packs+.sub-packs{margin-top:44px}
+.sub-packs{font-size:26px;font-style:italic;text-transform:uppercase;color:#fff;margin:0 0 16px;display:flex;align-items:center;gap:12px}
+.sub-packs::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--rojo),transparent)}
+.pack{position:relative;display:flex;flex-direction:column;background:var(--carbon);border:1px solid var(--linea-osc);border-radius:var(--radio);overflow:hidden}
+.pack.hogar{background:linear-gradient(180deg,#0B3A93,#072866)}
+.pack.hogar{border-color:#1D4FAE}
+.pack .foto{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+.pack .foto img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.precio-sello{position:absolute;right:10px;bottom:10px;background:var(--rojo);color:#fff;border-radius:12px;padding:4px 14px 2px;font-family:var(--display);font-style:italic;font-weight:900;font-size:40px;line-height:1;box-shadow:0 8px 20px -6px rgba(0,0,0,.6);transform:rotate(-3deg)}
+.precio-sello small{font-size:.5em;margin-right:2px}
+.pack .cuerpo{display:flex;flex-direction:column;gap:10px;padding:18px 18px 20px;flex:1}
+.pack h3{font-size:30px;font-style:italic;text-transform:uppercase}
+.pack ul{margin:0;padding:0 0 0 18px;color:#D4D8E0;font-size:15px;line-height:1.45}
+.pack li::marker{color:var(--oro)}
+.pack .btn{margin-top:auto;width:100%}
+.pack .btn.ok{background:var(--wsp);color:#fff}
 
 /* ---------- Catálogo ---------- */
-.seccion{padding:72px 0}
+.seccion{padding:80px 0}
 .cabeza{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:34px}
-.cabeza .lead{margin:10px 0 0}
-.grid-prod{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-.prod{display:flex;flex-direction:column;background:var(--blanco);border:1px solid var(--borde);border-radius:var(--radio);overflow:hidden}
-.prod .foto{aspect-ratio:1/1;background:#E9EDF2;overflow:hidden;padding:10px}
-.prod .foto img{width:100%;height:100%;object-fit:contain;border-radius:8px}
-.prod .cuerpo{display:flex;flex-direction:column;gap:12px;padding:18px;flex:1}
-.prod h3{font-size:22px}
+.hogar-sec{background:
+  radial-gradient(ellipse 50% 40% at 10% 0%,rgba(66,153,255,.35),transparent 70%),
+  linear-gradient(180deg,var(--azul-osc),var(--azul) 520px,var(--celeste) 520px)}
+.hogar-sec .cabeza{color:#fff}
+.hogar-sec .lead{color:#D8E6FF}
+.auto-sec{background:var(--negro);color:#fff}
+.auto-sec .lead{color:#B8BDC8}
+
+.grid-prod{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.prod{display:flex;flex-direction:column;background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:0 14px 34px -18px rgba(4,26,77,.45)}
+.prod .foto{aspect-ratio:1/1;overflow:hidden;background:radial-gradient(circle at 50% 45%,#5AA4FF,#0B4CC2 60%,#062B78);padding:8px}
+.prod .foto img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.prod .cuerpo{display:flex;flex-direction:column;gap:12px;padding:16px 18px 18px;flex:1}
+.prod h3{font-size:30px;font-style:italic;text-transform:uppercase}
 .prod .desc{margin:0;color:var(--texto-2);font-size:15px;line-height:1.45}
-.prod .nota{font-size:13px;color:var(--rojo-osc);margin:-4px 0 0;font-weight:600}
-.opciones{display:flex;flex-direction:column;gap:6px}
-.opciones legend,.opciones .tit{font-size:13px;font-weight:600;color:var(--texto-2);padding:0;margin-bottom:2px}
+.prod .nota{font-size:13px;color:var(--rojo-osc);margin:-4px 0 0;font-weight:700}
+.precios{display:grid;grid-template-columns:1fr 1fr;border-radius:12px;overflow:hidden;border:2px solid var(--oro)}
+.precios div{padding:6px 12px 8px}
+.precios span{display:block;font-size:12px;font-weight:700;color:var(--texto-2)}
+.precios b{font-family:var(--display);font-weight:800;font-size:28px;line-height:1;white-space:nowrap}
+.precios .unit{background:linear-gradient(180deg,#FFF6D0,#FFE48A)}
+.precios .mayor b{color:var(--rojo)}
+.opciones legend,.opciones .tit{font-size:13px;font-weight:700;color:var(--texto-2);padding:0;margin-bottom:4px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips input{position:absolute;opacity:0;pointer-events:none}
-.chips label{border:1.5px solid var(--borde);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600;cursor:pointer;user-select:none;transition:border-color .12s,background .12s}
-.chips label:hover{border-color:var(--grafito-3)}
-.chips input:checked+label{background:var(--grafito);border-color:var(--grafito);color:#fff}
-.chips input:focus-visible+label{outline:3px solid var(--azul);outline-offset:2px}
-.comprar{display:flex;gap:10px;margin-top:auto;padding-top:6px}
-.cant{display:flex;align-items:center;border:1.5px solid var(--borde);border-radius:999px;overflow:hidden}
-.cant button{width:36px;height:42px;border:0;background:transparent;font-size:20px;font-weight:700;color:var(--texto)}
-.cant button:hover{background:var(--hielo)}
-.cant output{min-width:26px;text-align:center;font-weight:700}
-.btn-agregar{flex:1;border:0;border-radius:999px;background:var(--rojo);color:#fff;font-weight:700;font-size:16px;padding:0 14px;min-height:44px;transition:background .15s}
+.chips label{border:1.5px solid var(--borde);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:700;cursor:pointer;user-select:none;transition:border-color .12s,background .12s}
+.chips label:hover{border-color:#8A93A3}
+.chips input:checked+label{background:var(--azul);border-color:var(--azul);color:#fff}
+.chips input:focus-visible+label{outline:3px solid var(--oro);outline-offset:2px}
+.comprar{display:flex;gap:10px;margin-top:auto;padding-top:4px}
+.cant{display:flex;align-items:center;border:1.5px solid var(--borde);border-radius:12px;overflow:hidden}
+.cant button{width:36px;height:44px;border:0;background:transparent;font-size:20px;font-weight:800;color:inherit}
+.cant button:hover{background:rgba(0,0,0,.06)}
+.cant output{min-width:26px;text-align:center;font-weight:800}
+.btn-agregar{flex:1;border:0;border-radius:12px;background:var(--rojo);color:#fff;font-weight:800;font-size:16px;min-height:46px;transition:background .15s}
 .btn-agregar:hover{background:var(--rojo-osc)}
 .btn-agregar.ok{background:var(--wsp)}
-.mas{margin-top:26px;padding:16px 20px;border-radius:var(--radio);background:var(--hielo);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:16px}
-.mas a{font-weight:700;color:var(--wsp-osc)}
 
-/* Línea auto: oscura como sus afiches */
-.auto{background:var(--grafito);color:#fff}
-.auto .lead{color:#B9BEC8}
-.auto .prod{background:var(--grafito-2);border-color:var(--grafito-3)}
-.auto .prod .foto{background:#15161A}
-.auto .prod .desc,.auto .opciones legend,.auto .opciones .tit{color:#B9BEC8}
-.auto .chips label{border-color:var(--grafito-3)}
-.auto .chips label:hover{border-color:#9AA0AA}
-.auto .chips input:checked+label{background:var(--amarillo);border-color:var(--amarillo);color:var(--grafito)}
-.auto .cant{border-color:var(--grafito-3)}
-.auto .cant button{color:#fff}
-.auto .cant button:hover{background:var(--grafito-3)}
-.auto .mas{background:var(--grafito-2)}
-.auto .mas a{color:#5FD68B}
+.auto-sec .prod{background:var(--carbon);color:#fff;box-shadow:none;border:1px solid var(--linea-osc)}
+.auto-sec .prod .foto{background:radial-gradient(circle at 50% 45%,#2B2F38,#000 70%)}
+.auto-sec .prod .desc,.auto-sec .opciones legend,.auto-sec .opciones .tit,.auto-sec .precios span{color:#AEB4BF}
+.auto-sec .precios .unit{background:linear-gradient(180deg,#3A2E08,#251D04)}
+.auto-sec .precios .unit b{color:var(--oro)}
+.auto-sec .precios .mayor b{color:#fff}
+.auto-sec .chips label{border-color:var(--linea-osc)}
+.auto-sec .chips input:checked+label{background:var(--oro);border-color:var(--oro);color:var(--negro)}
+.auto-sec .cant{border-color:var(--linea-osc)}
+.auto-sec .cant button:hover{background:var(--carbon-2)}
 
-/* ---------- Oferta pack ---------- */
-.pack{position:relative;background:var(--grafito);color:#fff;overflow:hidden;padding:20px 0 64px}
-.pack .banda{background:var(--rojo);clip-path:polygon(0 0,100% 0,96% 100%,0 100%);padding:14px 0;margin-bottom:44px}
-.pack .banda p{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(20px,2.6vw,28px);color:var(--amarillo)}
-.pack .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.pack img{border-radius:var(--radio);width:100%}
-.precio{font-family:var(--display);font-weight:700;font-size:clamp(64px,10vw,112px);line-height:.9;color:var(--amarillo);margin:14px 0 6px}
-.precio small{font-size:.38em;vertical-align:top;margin-right:4px}
-.pack ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px}
-.pack li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:#DADDE3}
-.pack li::before{content:"";width:16px;height:16px;margin-top:4px;border-radius:4px;background:var(--amarillo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23202227' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
-.pack li b{color:#fff}
-.pack .acciones{display:flex;flex-wrap:wrap;gap:12px}
-.pack .btn-linea{color:#fff}
-.pack .btn-linea:hover{background:rgba(255,255,255,.08)}
-@media (max-width:860px){.pack .grid{grid-template-columns:1fr}}
+.mas{margin-top:26px;padding:16px 20px;border-radius:var(--radio);background:#fff;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:16px;box-shadow:0 10px 24px -18px rgba(4,26,77,.5)}
+.mas a{font-weight:800;color:var(--wsp-osc)}
+.auto-sec .mas{background:var(--carbon);box-shadow:none}
+.auto-sec .mas a{color:#5FD68B}
 
-/* ---------- Empresas ---------- */
-.empresas{background:var(--amarillo);color:var(--grafito);padding:52px 0}
-.empresas .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
-.empresas h2{font-size:clamp(28px,3.6vw,40px)}
-.empresas p{margin:10px 0 0;max-width:60ch;font-size:18px}
-.empresas .btn{background:var(--grafito);color:#fff}
-.empresas .btn:hover{background:#000}
-@media (max-width:760px){.empresas .wrap{grid-template-columns:1fr}}
+/* ---------- Por mayor ---------- */
+.mayor-sec{background:linear-gradient(90deg,var(--rojo-osc),var(--rojo));color:#fff;padding:52px 0}
+.mayor-sec .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.mayor-sec h2{font-size:clamp(34px,4.4vw,52px)}
+.mayor-sec p{margin:10px 0 0;max-width:62ch;font-size:18px;color:#FFE3E4}
+@media (max-width:760px){.mayor-sec .wrap{grid-template-columns:1fr}}
 
 /* ---------- Cómo pedir ---------- */
 .pasos{counter-reset:paso;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0;margin:0;list-style:none}
-.pasos li{counter-increment:paso;position:relative;padding:28px 22px 24px;border-radius:var(--radio);background:var(--hielo)}
-.pasos li::before{content:counter(paso);display:grid;place-items:center;width:46px;height:46px;margin-bottom:16px;font-family:var(--display);font-weight:700;font-size:24px;background:var(--rojo);color:var(--amarillo);clip-path:polygon(18% 0,100% 0,82% 100%,0 100%)}
-.pasos h3{font-size:22px;margin-bottom:6px}
+.pasos li{counter-increment:paso;padding:26px 22px 24px;border-radius:var(--radio);background:var(--celeste)}
+.pasos li::before{content:counter(paso);display:grid;place-items:center;width:52px;height:46px;margin-bottom:14px;font-family:var(--display);font-style:italic;font-weight:900;font-size:30px;background:var(--rojo);color:var(--oro);clip-path:polygon(16% 0,100% 0,84% 100%,0 100%)}
+.pasos h3{font-size:28px;font-style:italic;text-transform:uppercase;margin-bottom:6px}
 .pasos p{margin:0;color:var(--texto-2);font-size:16px}
 @media (max-width:760px){.pasos{grid-template-columns:1fr}}
 
 /* ---------- Contacto ---------- */
-.contacto{background:var(--hielo)}
+.contacto{background:var(--azul-noche);color:#fff}
+.contacto .lead{color:#C9D8F5}
 .contacto .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
-.canal{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:var(--radio);background:#fff;border:1px solid var(--borde);text-decoration:none;transition:border-color .15s}
-.canal:hover{border-color:var(--grafito)}
-.canal svg{width:30px;height:30px;margin-bottom:6px}
-.canal span{font-size:14px;color:var(--texto-2)}
+.canal{display:flex;flex-direction:column;gap:4px;padding:22px;border-radius:var(--radio);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);text-decoration:none;transition:background .15s}
+.canal:hover{background:rgba(255,255,255,.13)}
+.canal svg{width:30px;height:30px;margin-bottom:8px}
+.canal span{font-size:14px;color:#BCCBEA}
 .canal b{font-size:18px;word-break:break-word}
-.canal.wsp{background:var(--wsp);border-color:var(--wsp);color:#fff}
+.canal.wsp{background:var(--wsp);border-color:var(--wsp)}
 .canal.wsp span{color:#DDF5E5}
 @media (max-width:900px){.contacto .grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.contacto .grid{grid-template-columns:1fr}}
 
-footer{background:var(--grafito);color:#AEB3BD;padding:36px 0 110px;font-size:15px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-footer .marca img{width:56px;height:56px}
+footer{background:var(--negro);color:#9AA0AB;padding:32px 0 110px;font-size:15px;border-top:3px solid var(--rojo)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+footer p{margin:0}
 
-/* ---------- Barra fija de pedido ---------- */
-.barra{position:fixed;left:50%;bottom:16px;z-index:50;transform:translate(-50%,140%);width:min(560px,100% - 24px);display:flex;align-items:center;gap:12px;background:var(--grafito);color:#fff;border-radius:18px;padding:10px 10px 10px 18px;box-shadow:0 18px 40px -12px rgba(0,0,0,.5);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+/* ---------- Barra fija ---------- */
+.barra{position:fixed;left:50%;bottom:16px;z-index:50;transform:translate(-50%,160%);width:min(600px,100% - 24px);display:flex;align-items:center;gap:12px;background:var(--negro);color:#fff;border:1px solid var(--linea-osc);border-radius:18px;padding:10px 10px 10px 18px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
 .barra.visible{transform:translate(-50%,0)}
-.barra .info{flex:1;line-height:1.25}
-.barra .info b{display:block;font-size:16px}
-.barra .info button{background:none;border:0;color:var(--amarillo);padding:0;font-size:14px;font-weight:600;text-decoration:underline}
-.barra .btn{padding:12px 18px;font-size:16px}
-
-.wsp-flotante{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wsp);display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.4);transition:opacity .2s}
+.barra .info{flex:1;line-height:1.2}
+.barra .info b{display:block;font-size:15px}
+.barra .total{font-family:var(--display);font-weight:800;font-size:26px;color:var(--oro)}
+.barra .info button{background:none;border:0;color:#fff;padding:0;font-size:13px;font-weight:700;text-decoration:underline;opacity:.85}
+.barra .btn{padding:12px 16px;font-size:16px}
+.wsp-flotante{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wsp);display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.45);transition:opacity .2s}
 .wsp-flotante svg{width:32px;height:32px}
 .wsp-flotante.oculto{opacity:0;pointer-events:none}
 
-/* ---------- Panel del pedido ---------- */
+/* ---------- Panel ---------- */
 .panel{position:fixed;inset:0;z-index:60;display:none}
 .panel.abierto{display:block}
-.panel .fondo{position:absolute;inset:0;background:rgba(15,17,22,.55)}
-.panel .caja{position:absolute;right:0;top:0;bottom:0;width:min(440px,100%);background:#fff;display:flex;flex-direction:column;animation:entra .25s ease-out}
+.panel .fondo{position:absolute;inset:0;background:rgba(5,8,16,.6)}
+.panel .caja{position:absolute;right:0;top:0;bottom:0;width:min(450px,100%);background:#fff;display:flex;flex-direction:column;animation:entra .25s ease-out}
 @keyframes entra{from{transform:translateX(40px);opacity:0}}
-.panel header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--borde)}
-.panel header h2{font-size:26px}
-.cerrar{width:40px;height:40px;border-radius:50%;border:0;background:var(--hielo);font-size:22px;line-height:1}
-.items{flex:1;overflow:auto;padding:8px 20px;margin:0;list-style:none}
-.item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--borde)}
-.item img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.panel header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--negro);color:#fff;border-bottom:3px solid var(--rojo)}
+.panel header h2{font-size:34px}
+.cerrar{width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:22px;line-height:1}
+.items{flex:1;overflow:auto;padding:4px 20px;margin:0;list-style:none}
+.item{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--borde)}
+.item img{width:60px;height:60px;border-radius:10px;object-fit:cover}
 .item b{display:block;font-size:16px;line-height:1.2}
 .item span{font-size:14px;color:var(--texto-2)}
-.item .quitar{background:none;border:0;color:var(--rojo-osc);font-size:14px;font-weight:600;padding:4px 0;text-decoration:underline}
+.item .sub{font-weight:800;color:var(--texto)}
+.item .quitar{background:none;border:0;color:var(--rojo-osc);font-size:13px;font-weight:700;padding:2px 0;text-decoration:underline}
 .item .cant button{width:30px;height:34px;font-size:18px}
 .vacio{padding:40px 10px;text-align:center;color:var(--texto-2)}
 .vacio b{display:block;color:var(--texto);font-size:18px;margin-bottom:6px}
-.panel form{padding:16px 20px 20px;border-top:1px solid var(--borde);display:grid;gap:10px;background:var(--hielo)}
-.panel label{font-size:14px;font-weight:600}
+.panel form{padding:14px 20px 20px;border-top:1px solid var(--borde);display:grid;gap:10px;background:var(--celeste)}
+.resumen{display:flex;justify-content:space-between;align-items:baseline}
+.resumen b{font-family:var(--display);font-weight:800;font-size:32px}
+.panel label{font-size:14px;font-weight:700}
 .panel input[type=text]{width:100%;border:1.5px solid var(--borde);border-radius:10px;padding:11px 12px;font:inherit;font-size:16px;background:#fff;margin-top:4px}
 .panel .fila{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .panel .aviso{font-size:13px;color:var(--texto-2);margin:0}
@@ -231,113 +240,91 @@ footer .marca img{width:56px;height:56px}
 
 <header class="top">
   <div class="wrap">
-    <a class="marca" href="#inicio" aria-label="BIKARI, ir al inicio">
-      <img src="img/logo.jpg" alt=""><span>BIKARI</span>
-    </a>
+    <a class="marca" href="#inicio" aria-label="BIKARI, ir al inicio"><img src="img/logo.jpg" alt=""><span class="oro">BIKARI</span></a>
     <nav aria-label="Secciones">
+      <a href="#ofertas">Ofertas</a>
       <a href="#hogar">Hogar</a>
-      <a href="#pack">Pack auto</a>
-      <a href="#auto">Automotriz</a>
-      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#auto">Auto</a>
+      <a href="#por-mayor">Por mayor</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <button class="btn-carro" type="button" data-abrir-panel aria-label="Ver mi pedido">
-      Mi pedido <span class="num" data-contador aria-live="polite">0</span>
-    </button>
+    <button class="btn-carro btn-oro" type="button" data-abrir-panel aria-label="Ver mi pedido">Mi pedido <span class="num" data-contador aria-live="polite">0</span></button>
   </div>
 </header>
 
 <main id="inicio">
 
 <section class="hero">
-  <div class="franja" aria-hidden="true"></div>
   <div class="wrap">
     <div>
-      <h1><span class="nombre">BIKARI</span>Limpieza que rinde en casa, en el negocio y en tu auto</h1>
-      <p class="lead">Desinfectantes, lavavajilla, limpiavidrio, quita sarro, shampoo y siliconas para auto. Elige tus productos, arma tu pedido y envíalo por WhatsApp: te respondemos con precio y entrega.</p>
+      <div class="cinta"><span class="oro">BIKARI</span></div>
+      <h1>Limpieza, brillo y protección para tu casa y tu auto</h1>
+      <p class="lead">Limpiatodo, lejía, jabón, lavavajilla, detergente, shampoo y siliconas para auto. Precios por unidad y por mayor. Arma tu pedido aquí y envíalo por WhatsApp.</p>
       <div class="acciones">
-        <a class="btn btn-wsp" href="#hogar">Ver productos y pedir</a>
-        <a class="btn btn-linea" data-wsp="Hola BIKARI, quiero información sobre sus productos de limpieza." href="#">Escribir por WhatsApp</a>
+        <a class="btn btn-oro" href="#ofertas">Ver ofertas desde S/ 28</a>
+        <a class="btn btn-borde" href="#hogar">Ver todos los productos</a>
       </div>
-      <ul class="datos">
-        <li>Galoneras de 3.5 L que rinden</li>
-        <li>Formatos chicos para probar</li>
-        <li>Pedidos para casa y por volumen</li>
+      <ul class="sellos">
+        <li>Galoneras de 3.5 L</li>
+        <li>Precio por mayor</li>
+        <li>Pedido directo por WhatsApp</li>
       </ul>
     </div>
     <figure class="hero-img">
       <img src="img/mascotas.jpg" alt="Apu y Gaia, los schnauzers de BIKARI, con capas y escudos de la marca">
-      <figcaption><b>Apu y Gaia</b>, tus amigos de la limpieza</figcaption>
+      <figcaption>Apu y Gaia, tus amigos de la limpieza</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="lineas" aria-label="Elige una línea">
-  <div class="wrap grid">
-    <a class="linea" href="#hogar">
-      <img src="img/limpiatodo.jpg" alt="">
-      <div><h3>Para tu casa</h3><p>Pisos, cocina, baño, vidrios y manos</p></div>
-    </a>
-    <a class="linea" href="#auto">
-      <img src="img/silicona.jpg" alt="">
-      <div><h3>Para tu auto</h3><p>Lavado, llantas, tablero y aroma</p></div>
-    </a>
+<section class="ofertas" id="ofertas">
+  <div class="wrap">
+    <div class="cabeza">
+      <div>
+        <h2><span class="oro">Súper ofertas</span></h2>
+        <p class="lead">Packs listos a precio cerrado. Agrégalos a tu pedido o pídelos directo.</p>
+      </div>
+    </div>
+    <h3 class="sub-packs">Para tu auto y tu moto</h3>
+    <div class="packs" data-packs="auto"></div>
+    <h3 class="sub-packs">Para tu casa</h3>
+    <div class="packs" data-packs="hogar"></div>
   </div>
 </section>
 
-<section class="seccion" id="hogar">
+<section class="seccion hogar-sec" id="hogar">
   <div class="wrap">
     <div class="cabeza">
       <div>
         <h2>Limpieza para el hogar</h2>
-        <p class="lead">Elige presentación y aroma, agrega al pedido y sigue comprando.</p>
+        <p class="lead">Elige presentación y aroma, revisa el precio y agrega a tu pedido.</p>
       </div>
     </div>
     <div class="grid-prod" data-linea="hogar"></div>
-    <p class="mas">¿Buscas lejía, detergente u otro producto que no ves aquí? <a data-wsp="Hola BIKARI, ¿tienen lejía, detergente u otros productos? Quisiera saber precios." href="#">Pregúntanos por WhatsApp</a></p>
+    <p class="mas">¿Necesitas otro producto o una presentación que no ves aquí? <a data-wsp="Hola BIKARI, ¿tienen este producto? " href="#">Pregúntanos por WhatsApp</a></p>
   </div>
 </section>
 
-<section class="pack" id="pack">
-  <div class="banda"><div class="wrap"><p>Súper oferta: pack automotriz completo</p></div></div>
-  <div class="wrap grid">
-    <img src="img/pack.jpg" alt="Pack automotriz BIKARI: silicona para tablero, silicona para llantas y shampoo para auto de 3.5 litros cada uno">
-    <div>
-      <h2>Tres galoneras para dejar tu auto como nuevo</h2>
-      <p class="precio"><small>S/</small>50</p>
-      <ul>
-        <li><span><b>Silicona para tablero 3.5 L.</b> Brillo y protección contra el polvo y los rayos UV.</span></li>
-        <li><span><b>Silicona para llantas 3.5 L.</b> Llantas negras y brillantes.</span></li>
-        <li><span><b>Shampoo para carrocería 3.5 L.</b> Limpieza profunda sin dañar la pintura.</span></li>
-      </ul>
-      <div class="acciones">
-        <button class="btn btn-wsp" type="button" data-agregar-pack>Agregar pack a mi pedido</button>
-        <a class="btn btn-linea" data-wsp="Hola BIKARI, quiero el Pack Automotriz de S/ 50 (silicona tablero 3.5 L + silicona llantas 3.5 L + shampoo 3.5 L)." href="#">Pedir solo el pack</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="seccion auto" id="auto">
+<section class="seccion auto-sec" id="auto">
   <div class="wrap">
     <div class="cabeza">
       <div>
-        <h2>Línea automotriz</h2>
+        <h2><span class="oro">Línea automotriz</span></h2>
         <p class="lead">Para el lavado en casa, la cochera o tu car wash.</p>
       </div>
     </div>
     <div class="grid-prod" data-linea="auto"></div>
-    <p class="mas">¿Tienes un car wash o taller? <a data-wsp="Hola BIKARI, tengo un car wash/taller y quiero cotizar productos automotrices por volumen." href="#">Cotiza por volumen</a></p>
+    <p class="mas">¿Tienes un car wash o taller? <a data-wsp="Hola BIKARI, tengo un car wash/taller y quiero cotizar productos automotrices por mayor." href="#">Cotiza por mayor</a></p>
   </div>
 </section>
 
-<section class="empresas">
+<section class="mayor-sec" id="por-mayor">
   <div class="wrap">
     <div>
-      <h2>¿Compras para tu empresa, condominio o restaurante?</h2>
-      <p>Cuéntanos qué productos usas y cuánto necesitas al mes. Te enviamos una cotización por volumen.</p>
+      <h2>¿Compras para tu negocio?</h2>
+      <p>Bodegas, restaurantes, condominios, car wash y empresas: pide precio por mayor. Cuéntanos qué productos y cuántas unidades necesitas.</p>
     </div>
-    <a class="btn" data-wsp="Hola BIKARI, quiero una cotización por volumen para mi empresa. Productos que necesito: " href="#">Pedir cotización</a>
+    <a class="btn btn-oro" data-wsp="Hola BIKARI, quiero comprar por mayor. Necesito: " href="#">Pedir precio por mayor</a>
   </div>
 </section>
 
@@ -345,20 +332,20 @@ footer .marca img{width:56px;height:56px}
   <div class="wrap">
     <div class="cabeza"><h2>Cómo pedir</h2></div>
     <ol class="pasos">
-      <li><h3>Elige tus productos</h3><p>Marca presentación, aroma y cantidad, y toca «Agregar».</p></li>
-      <li><h3>Revisa tu pedido</h3><p>Abre «Mi pedido», ajusta cantidades y escribe tu nombre y distrito.</p></li>
-      <li><h3>Envíalo por WhatsApp</h3><p>El mensaje sale listo. Te confirmamos precio, pago y entrega.</p></li>
+      <li><h3>Elige tus productos</h3><p>Marca presentación, aroma y cantidad, y toca «Agregar». Los packs se agregan con un toque.</p></li>
+      <li><h3>Revisa tu pedido</h3><p>Abre «Mi pedido», mira el total, ajusta cantidades y escribe tu nombre y distrito.</p></li>
+      <li><h3>Envíalo por WhatsApp</h3><p>El mensaje sale listo. Te confirmamos precio final, pago y entrega.</p></li>
     </ol>
   </div>
 </section>
 
 <section class="seccion contacto" id="contacto">
   <div class="wrap">
-    <h2>Contáctanos</h2>
+    <h2><span class="oro">Contáctanos</span></h2>
     <p class="lead">Escríbenos o llámanos. Por WhatsApp respondemos más rápido.</p>
     <div class="grid">
       <a class="canal wsp" data-wsp="Hola BIKARI, quiero hacer un pedido." href="#">
-        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.8-.4z"/></svg>
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.900-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.8-.4z"/></svg>
         <span>WhatsApp</span><b>+51 996 954 281</b>
       </a>
       <a class="canal" href="tel:+51945247000">
@@ -381,28 +368,25 @@ footer .marca img{width:56px;height:56px}
 
 <footer>
   <div class="wrap">
-    <a class="marca" href="#inicio"><img src="img/logo.jpg" alt="BIKARI Ingeniería"></a>
+    <a class="marca" href="#inicio"><img src="img/logo.jpg" alt="BIKARI Ingeniería"><span class="oro">BIKARI</span></a>
     <p>BIKARI Ingeniería · Limpieza doméstica, industrial y automotriz · Lima, Perú</p>
+    <p>Precios en soles. Sujetos a confirmación al hacer tu pedido.</p>
   </div>
 </footer>
 
-<!-- Barra fija con el pedido -->
 <div class="barra" data-barra role="region" aria-label="Resumen de tu pedido">
   <div class="info">
     <b data-resumen>0 productos</b>
+    <span class="total" data-total>S/ 0.00</span>
     <button type="button" data-abrir-panel>Revisar pedido</button>
   </div>
-  <a class="btn btn-wsp" href="#" data-enviar>
-    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm5.9 15.7c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.8-.4z"/></svg>
-    Enviar pedido
-  </a>
+  <a class="btn btn-wsp" href="#" data-enviar>Enviar pedido</a>
 </div>
 
 <a class="wsp-flotante" data-flotante data-wsp="Hola BIKARI, quiero hacer un pedido." href="#" aria-label="Escribir a BIKARI por WhatsApp">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.8-.4z"/></svg>
 </a>
 
-<!-- Panel del pedido -->
 <div class="panel" data-panel role="dialog" aria-modal="true" aria-labelledby="titulo-pedido">
   <div class="fondo" data-cerrar-panel></div>
   <div class="caja">
@@ -412,11 +396,12 @@ footer .marca img{width:56px;height:56px}
     </header>
     <ul class="items" data-items></ul>
     <form data-form>
+      <div class="resumen"><span>Total a precio unitario</span><b data-total>S/ 0.00</b></div>
       <div class="fila">
         <label>Tu nombre<input type="text" name="nombre" autocomplete="name"></label>
         <label>Distrito<input type="text" name="distrito" autocomplete="address-level2"></label>
       </div>
-      <p class="aviso">Te respondemos por WhatsApp con el precio total y las opciones de pago y entrega.</p>
+      <p class="aviso">Si tu cantidad califica para precio por mayor, te lo aplicamos al confirmar por WhatsApp junto con el pago y la entrega.</p>
       <button class="btn btn-wsp" type="submit">Enviar pedido por WhatsApp</button>
     </form>
   </div>
@@ -425,68 +410,113 @@ footer .marca img{width:56px;height:56px}
 <script>
 (function(){
   var WSP = "51996954281";
-  var linkWsp = function(txt){ return "https://wa.me/" + WSP + "?text=" + encodeURIComponent(txt); };
+  var linkWsp = function(t){ return "https://wa.me/" + WSP + "?text=" + encodeURIComponent(t); };
+  var soles = function(n){ return "S/ " + n.toFixed(2); };
 
+  // Precios tomados de los afiches vigentes. Cada presentación: [nombre, unitario, por mayor]
   var productos = [
-    {id:"limpiatodo", linea:"hogar", nombre:"Limpiatodo antibacterial", img:"img/limpiatodo.jpg",
-     desc:"Limpia, desinfecta y aromatiza pisos, mesas y superficies de toda la casa.",
-     tamanos:["3.5 L","900 ml"], aromas:["Lavanda","Floral"]},
+    {id:"limpiatodo", linea:"hogar", nombre:"Limpiatodo multiusos", img:"img/limpiatodo.jpg",
+     desc:"Elimina grasa y suciedad, desinfecta y deja aroma duradero en toda la casa.",
+     pres:[["3.5 L",9.00,7.80]], aromas:["Lavanda","Floral","Coco","Manzana verde"]},
     {id:"pino", linea:"hogar", nombre:"Pino desinfectante", img:"img/pino.jpg",
-     desc:"Desinfecta pisos, baños y patios y deja aroma a pino.",
-     tamanos:["3.5 L","900 ml"]},
-    {id:"lavavajilla", linea:"hogar", nombre:"Lavavajilla aroma limón", img:"img/lavavajilla.jpg",
-     desc:"Quita la grasa de platos y ollas y rinde con poco producto.",
-     tamanos:["3.5 L","900 ml","350 ml"]},
+     desc:"Elimina bacterias, hongos y malos olores y deja aroma fresco a pino.",
+     pres:[["3.5 L",9.00,7.00]]},
+    {id:"lejia", linea:"hogar", nombre:"Lejía", img:"img/lejia.jpg",
+     desc:"Desinfecta, blanquea y elimina olores en pisos, baños y ropa.",
+     pres:[["3.2 L",7.70,6.70],["3.8 L",8.50,7.30]]},
     {id:"jabon", linea:"hogar", nombre:"Jabón líquido antibacterial", img:"img/jabon.jpg",
-     desc:"Jabón de tocador suave con la piel, para baño y cocina.",
-     tamanos:["3.5 L","400 ml"], aromas:["Fresa","Limón"]},
+     desc:"Jabón de tocador de fórmula equilibrada, suave con la piel.",
+     pres:[["3.5 L",15.00,10.50]], aromas:["Fresa","Coco","Manzana verde"]},
+    {id:"lavavajilla", linea:"hogar", nombre:"Lavavajilla desinfectante", img:"img/lavavajilla.jpg",
+     desc:"Fórmula concentrada que arranca la grasa de platos, vasos y ollas.",
+     pres:[["3.5 L",20.00,15.00]]},
+    {id:"detergente", linea:"hogar", nombre:"Detergente líquido", img:"img/detergente.jpg",
+     desc:"Quita manchas difíciles sin maltratar la ropa. Para lavadora y a mano. Aroma floral.",
+     pres:[["3.5 L",20.00,15.00]]},
     {id:"vidrio", linea:"hogar", nombre:"Limpiavidrio", img:"img/vidrio.jpg",
-     desc:"Vidrios, espejos y mamparas sin manchas ni marcas. Uso doméstico e industrial.",
-     tamanos:["3.5 L","650 ml con atomizador"]},
-    {id:"sacagrasa", linea:"hogar", nombre:"Saca grasa multiuso", img:"img/sacagrasa.jpg",
-     desc:"Grasa pesada, residuos quemados y aceite en cocinas, mayólicas, duchas y talleres.",
-     tamanos:["650 ml con atomizador"]},
+     desc:"Ventanas, espejos y mamparas sin rayas. Fórmula antiempañante.",
+     pres:[["650 ml con atomizador",3.80,3.00],["3.5 L",11.00,8.20]]},
     {id:"acido", linea:"hogar", nombre:"Ácido quita sarro", img:"img/acido.jpg",
      desc:"Elimina sarro, óxido y manchas de agua dura en inodoros, duchas y griferías.",
-     tamanos:["3.8 L"], nota:"Usa guantes y ventila el ambiente."},
+     pres:[["3.8 L",11.00,7.80]], nota:"Usa guantes y ventila el ambiente."},
 
     {id:"shampoo", linea:"auto", nombre:"Shampoo para auto", img:"img/shampoo.jpg",
-     desc:"Limpieza profunda sin dañar la pintura. Para autos, motos, camiones y bicicletas.",
-     tamanos:["3.5 L","900 ml"]},
-    {id:"silicona-llanta", linea:"auto", nombre:"Silicona para llantas", img:"img/silicona.jpg",
-     desc:"Llantas negras y con brillo extremo de larga duración.",
-     tamanos:["3.5 L","350 ml con atomizador"]},
-    {id:"silicona-tablero", linea:"auto", nombre:"Silicona para tablero", img:"img/tablero.jpg",
-     desc:"Limpia, restaura y protege el tablero del polvo y los rayos UV.",
-     tamanos:["3.5 L"]},
-    {id:"ambientador", linea:"auto", nombre:"Aromatizador de interiores", img:"img/ambientador.jpg",
-     desc:"Para el auto, la casa o la oficina. Elige tu aroma favorito.",
-     tamanos:["100 ml"], aromas:["Lavanda","Floral","Fresa","Chicle","Auto nuevo","Invictus","Citrus"]}
+     desc:"Espuma activa que quita suciedad y grasa sin dañar la pintura. Calidad premium.",
+     pres:[["3.5 L",22.00,17.00]], aromas:["Chicle","Fresa"]},
+    {id:"llanta", linea:"auto", nombre:"Silicona para llantas", img:"img/llanta.jpg",
+     desc:"Brillo profundo y capa protectora que repele polvo y protege del sol.",
+     pres:[["3.5 L",25.00,17.00]]},
+    {id:"tablero", linea:"auto", nombre:"Silicona para tablero", img:"img/tablero.jpg",
+     desc:"Limpia, protege y da brillo a plásticos, vinilos y caucho. Protege de los rayos UV.",
+     pres:[["Premium 3.5 L",25.00,19.00],["Regular 3.5 L",22.00,17.00]], aromas:["Coco","Fresa","Chicle","Auto nuevo"], tituloAroma:"Fragancia"},
+    {id:"ambientador", linea:"auto", nombre:"Ambientador de interiores", img:"img/ambientador.jpg",
+     desc:"Elimina malos olores y deja una fragancia suave de larga duración. 100 ml.",
+     pres:[["100 ml",8.00,70.00]], docena:true, aromas:["Fresa","Limón","Chicle","Invictus","Lavanda","Floral","Auto nuevo"]},
+    {id:"microfibra", linea:"auto", nombre:"Paño microfibra de peluche", img:"img/microfibra.jpg",
+     desc:"Súper suave y absorbente. No raya. Para auto, vidrios, cocina, baño y electrónicos.",
+     pres:[["72 × 45 cm",3.50,31.00],["35 × 45 cm",2.50,21.00]], docena:true,
+     aromas:["Fucsia","Azul","Gris","Verde","Naranja","Morado","Amarillo"], tituloAroma:"Color"}
   ];
-  var porId = {}; productos.forEach(function(p){ porId[p.id]=p; });
 
-  // ---------- Pintar tarjetas ----------
-  function chips(nombre, valores, titulo){
+  var packs = [
+    {id:"combo3", tipo:"auto", nombre:"Combo 3", precio:60, img:"img/combo.jpg",
+     items:["Silicona para tablero 3.5 L","Shampoo para auto 3.5 L","Silicona para llantas 3.5 L"]},
+    {id:"packauto", tipo:"auto", nombre:"Pack Auto", precio:85, img:"img/pack85.jpg",
+     items:["Silicona para tablero 3.5 L","Shampoo para auto 3.5 L","Silicona para llantas 3.5 L","Restaurador de partes negras 400 g","Paño microfibra 35 × 45 cm"]},
+    {id:"packautoplus", tipo:"auto", nombre:"Pack Auto + aroma", precio:90, img:"img/pack90.jpg",
+     items:["Todo el Pack Auto","Aromatizador de interiores 50 g"]},
+    {id:"motero", tipo:"auto", nombre:"Pack Motero", precio:85, img:"img/motero.jpg",
+     items:["Silicona para tablero 3.5 L","Shampoo para moto 3.5 L","Abrillantador para llantas 3.5 L","Guantes de protección","Paño microfibra 35 × 45 cm"]},
+    {id:"dom28", tipo:"hogar", nombre:"Pack Doméstico", precio:28, img:"img/pack28.jpg",
+     items:["Jabón líquido","Limpiavidrio","Lejía"]},
+    {id:"dom32", tipo:"hogar", nombre:"Pack Doméstico Plus", precio:32, img:"img/pack32.jpg",
+     items:["Lavavajilla","Limpiatodo","Pino desinfectante"]},
+    {id:"completo", tipo:"hogar", nombre:"Pack Completo", precio:60, img:"img/pack60h.jpg",
+     items:["Jabón líquido","Lejía","Pino desinfectante","Lavavajilla","Limpiatodo","Limpiavidrio"]}
+  ];
+
+  var porId = {}; productos.forEach(function(p){ porId[p.id]=p; });
+  var packPorId = {}; packs.forEach(function(p){ packPorId[p.id]=p; });
+
+  // ---------- Packs ----------
+    packs.forEach(function(p){
+    var el = document.createElement("article");
+    el.className = "pack " + p.tipo;
+    el.innerHTML =
+      '<div class="foto"><img src="'+p.img+'" alt="'+p.nombre+' BIKARI" loading="lazy"><span class="precio-sello"><small>S/</small>'+p.precio+'</span></div>' +
+      '<div class="cuerpo"><h3 class="oro">'+p.nombre+'</h3><ul>'+p.items.map(function(i){return "<li>"+i+"</li>";}).join("")+'</ul>' +
+      '<button type="button" class="btn btn-oro" data-pack="'+p.id+'">Agregar pack · S/ '+p.precio+'</button></div>';
+    document.querySelector('[data-packs="'+p.tipo+'"]').appendChild(el);
+  });
+
+  // ---------- Productos ----------
+  function chips(nombre, valores, titulo, etiqueta){
     if(!valores || !valores.length) return "";
-    if(valores.length===1) return '<div class="opciones"><span class="tit">'+titulo+': '+valores[0]+'</span></div>';
+    if(valores.length===1) return '<div class="opciones"><span class="tit">'+titulo+': '+(etiqueta?etiqueta(valores[0],0):valores[0])+'</span></div>';
     return '<fieldset class="opciones"><legend>'+titulo+'</legend><div class="chips">' +
       valores.map(function(v,i){
-        var id = nombre+"-"+i;
-        return '<input type="radio" id="'+id+'" name="'+nombre+'" value="'+v+'"'+(i===0?' checked':'')+'><label for="'+id+'">'+v+'</label>';
+        var id=nombre+"-"+i;
+        return '<input type="radio" id="'+id+'" name="'+nombre+'" value="'+i+'"'+(i===0?' checked':'')+'><label for="'+id+'">'+(etiqueta?etiqueta(v,i):v)+'</label>';
       }).join("") + '</div></fieldset>';
+  }
+  function cajaPrecios(pr, docena){
+    return '<div class="unit"><span>'+(docena?'Por unidad':'Precio unitario')+'</span><b>'+soles(pr[1])+'</b></div>' +
+           '<div class="mayor"><span>'+(docena?'Por docena (12)':'Por mayor')+'</span><b>'+soles(pr[2])+'</b></div>';
   }
   productos.forEach(function(p){
     var cont = document.querySelector('[data-linea="'+p.linea+'"]');
     var art = document.createElement("article");
-    art.className = "prod"; art.dataset.id = p.id;
+    art.className="prod"; art.dataset.id=p.id;
     art.innerHTML =
       '<div class="foto"><img src="'+p.img+'" alt="'+p.nombre+' BIKARI" loading="lazy"></div>' +
       '<div class="cuerpo">' +
         '<h3>'+p.nombre+'</h3>' +
         '<p class="desc">'+p.desc+'</p>' +
-        (p.nota ? '<p class="nota">'+p.nota+'</p>' : '') +
-        chips(p.id+"-t", p.tamanos, "Presentación") +
-        chips(p.id+"-a", p.aromas, "Aroma") +
+        (p.nota?'<p class="nota">'+p.nota+'</p>':'') +
+        chips(p.id+"-t", p.pres, "Presentación", function(v){return v[0];}) +
+        '<div class="precios" data-precios>'+cajaPrecios(p.pres[0],p.docena)+'</div>' +
+        (p.docena ? chips(p.id+"-d", ["Unidad","Docena (12)"], "Comprar por") : '') +
+        chips(p.id+"-a", p.aromas, p.tituloAroma||"Aroma") +
         '<div class="comprar">' +
           '<div class="cant" role="group" aria-label="Cantidad"><button type="button" data-menos aria-label="Quitar uno">−</button><output>1</output><button type="button" data-mas aria-label="Agregar uno">+</button></div>' +
           '<button type="button" class="btn-agregar" data-agregar>Agregar</button>' +
@@ -494,94 +524,96 @@ footer .marca img{width:56px;height:56px}
       '</div>';
     cont.appendChild(art);
   });
+  document.addEventListener("change", function(e){
+    var art = e.target.closest(".prod");
+    if(art && e.target.name===art.dataset.id+"-t"){
+      art.querySelector("[data-precios]").innerHTML = cajaPrecios(porId[art.dataset.id].pres[+e.target.value], porId[art.dataset.id].docena);
+    }
+  });
 
   // ---------- Pedido ----------
-  var pedido = []; // {clave, id, nombre, img, tam, aroma, cant}
-  function elegido(art, nombre, lista){
-    if(!lista || !lista.length) return "";
-    if(lista.length===1) return lista[0];
-    var r = art.querySelector('input[name="'+nombre+'"]:checked'); return r ? r.value : lista[0];
-  }
+  var pedido = [];
+  function idx(art,nombre){ var r=art.querySelector('input[name="'+nombre+'"]:checked'); return r?+r.value:0; }
   function agregar(item){
-    var ya = pedido.find(function(x){ return x.clave===item.clave; });
+    var ya = pedido.find(function(x){return x.clave===item.clave;});
     if(ya) ya.cant += item.cant; else pedido.push(item);
     actualizar();
   }
-  function totalUnidades(){ return pedido.reduce(function(s,x){ return s+x.cant; },0); }
+  function confirmar(btn, txt, original){
+    btn.textContent = txt; btn.classList.add("ok");
+    clearTimeout(btn._t); btn._t=setTimeout(function(){ btn.textContent=original; btn.classList.remove("ok"); },1400);
+  }
 
   document.addEventListener("click", function(e){
     var art = e.target.closest(".prod");
     if(art){
       var out = art.querySelector("output");
-      if(e.target.closest("[data-mas]")) out.value = Math.min(99, +out.value+1);
-      if(e.target.closest("[data-menos]")) out.value = Math.max(1, +out.value-1);
+      if(e.target.closest("[data-mas]")) out.value = Math.min(99,+out.value+1);
+      if(e.target.closest("[data-menos]")) out.value = Math.max(1,+out.value-1);
       var btn = e.target.closest("[data-agregar]");
       if(btn){
-        var p = porId[art.dataset.id];
-        var tam = elegido(art, p.id+"-t", p.tamanos), aroma = elegido(art, p.id+"-a", p.aromas);
-        agregar({clave:p.id+"|"+tam+"|"+aroma, id:p.id, nombre:p.nombre, img:p.img, tam:tam, aroma:aroma, cant:+out.value});
-        out.value = 1;
-        btn.textContent = "Agregado ✓"; btn.classList.add("ok");
-        clearTimeout(btn._t); btn._t = setTimeout(function(){ btn.textContent="Agregar"; btn.classList.remove("ok"); }, 1400);
+        var p=porId[art.dataset.id], pr=p.pres[idx(art,p.id+"-t")];
+        var aroma = p.aromas ? p.aromas[idx(art,p.id+"-a")] : "";
+        var porDoc = p.docena && idx(art,p.id+"-d")===1;
+        var tam = pr[0] + (porDoc ? " · docena" : "");
+        agregar({clave:p.id+"|"+tam+"|"+aroma, nombre:p.nombre, img:p.img, det:[tam,aroma].filter(Boolean).join(" · "), precio:porDoc?pr[2]:pr[1], cant:+out.value});
+        out.value=1; confirmar(btn,"Agregado ✓","Agregar");
       }
     }
-    if(e.target.closest("[data-agregar-pack]")){
-      agregar({clave:"pack", id:"pack", nombre:"Pack automotriz (S/ 50)", img:"img/pack.jpg", tam:"3 galoneras de 3.5 L", aroma:"", cant:1});
-      var b = e.target.closest("[data-agregar-pack]"); b.textContent = "Pack agregado ✓";
-      setTimeout(function(){ b.textContent="Agregar pack a mi pedido"; }, 1400);
+    var bp = e.target.closest("[data-pack]");
+    if(bp){
+      var k = packPorId[bp.dataset.pack];
+      agregar({clave:"pack|"+k.id, nombre:k.nombre, img:k.img, det:k.items.length+" productos", precio:k.precio, cant:1});
+      confirmar(bp,"Pack agregado ✓","Agregar pack · S/ "+k.precio);
     }
     var link = e.target.closest("[data-wsp]");
-    if(link){ e.preventDefault(); window.open(linkWsp(link.dataset.wsp), "_blank", "noopener"); }
+    if(link){ e.preventDefault(); window.open(linkWsp(link.dataset.wsp),"_blank","noopener"); }
     if(e.target.closest("[data-abrir-panel]")) abrirPanel();
     if(e.target.closest("[data-cerrar-panel]")) cerrarPanel();
     if(e.target.closest("[data-enviar]")){ e.preventDefault(); if(pedido.length) abrirPanel(); }
-
     var it = e.target.closest(".item");
     if(it){
       var x = pedido[+it.dataset.i];
-      if(e.target.closest("[data-mas]")) x.cant = Math.min(99, x.cant+1);
-      if(e.target.closest("[data-menos]")) x.cant = Math.max(1, x.cant-1);
+      if(e.target.closest("[data-mas]")) x.cant=Math.min(99,x.cant+1);
+      if(e.target.closest("[data-menos]")) x.cant=Math.max(1,x.cant-1);
       if(e.target.closest("[data-quitar]")) pedido.splice(+it.dataset.i,1);
       actualizar();
     }
   });
 
-  var panel = document.querySelector("[data-panel]"), ultimoFoco = null;
-  function abrirPanel(){ ultimoFoco = document.activeElement; panel.classList.add("abierto"); document.body.style.overflow="hidden"; panel.querySelector(".cerrar").focus(); }
+  var panel=document.querySelector("[data-panel]"), ultimoFoco=null;
+  function abrirPanel(){ ultimoFoco=document.activeElement; panel.classList.add("abierto"); document.body.style.overflow="hidden"; panel.querySelector(".cerrar").focus(); }
   function cerrarPanel(){ panel.classList.remove("abierto"); document.body.style.overflow=""; if(ultimoFoco) ultimoFoco.focus(); }
   document.addEventListener("keydown", function(e){ if(e.key==="Escape" && panel.classList.contains("abierto")) cerrarPanel(); });
 
+  function total(){ return pedido.reduce(function(s,x){return s+x.precio*x.cant;},0); }
   function actualizar(){
-    var n = totalUnidades();
-    document.querySelectorAll("[data-contador]").forEach(function(c){ c.textContent = n; });
-    document.querySelector("[data-resumen]").textContent = n + (n===1 ? " producto en tu pedido" : " productos en tu pedido");
+    var n = pedido.reduce(function(s,x){return s+x.cant;},0);
+    document.querySelectorAll("[data-contador]").forEach(function(c){c.textContent=n;});
+    document.querySelectorAll("[data-total]").forEach(function(c){c.textContent=soles(total());});
+    document.querySelector("[data-resumen]").textContent = n + (n===1?" producto":" productos");
     document.querySelector("[data-barra]").classList.toggle("visible", n>0);
     document.querySelector("[data-flotante]").classList.toggle("oculto", n>0);
-    var ul = document.querySelector("[data-items]");
-    if(!pedido.length){
-      ul.innerHTML = '<li class="vacio"><b>Tu pedido está vacío</b>Elige productos en el catálogo y toca «Agregar».</li>';
-    } else {
-      ul.innerHTML = pedido.map(function(x,i){
-        var det = [x.tam, x.aroma].filter(Boolean).join(" · ");
-        return '<li class="item" data-i="'+i+'"><img src="'+x.img+'" alt="">' +
-          '<div><b>'+x.nombre+'</b><span>'+det+'</span><br><button type="button" class="quitar" data-quitar>Quitar</button></div>' +
-          '<div class="cant" role="group" aria-label="Cantidad de '+x.nombre+'"><button type="button" data-menos aria-label="Quitar uno">−</button><output>'+x.cant+'</output><button type="button" data-mas aria-label="Agregar uno">+</button></div></li>';
-      }).join("");
-    }
-    document.querySelector("[data-form] button").disabled = !pedido.length;
+    var ul=document.querySelector("[data-items]");
+    ul.innerHTML = pedido.length ? pedido.map(function(x,i){
+      return '<li class="item" data-i="'+i+'"><img src="'+x.img+'" alt="">' +
+        '<div><b>'+x.nombre+'</b><span>'+x.det+'</span><br><span class="sub">'+soles(x.precio*x.cant)+'</span> · <button type="button" class="quitar" data-quitar>Quitar</button></div>' +
+        '<div class="cant" role="group" aria-label="Cantidad de '+x.nombre+'"><button type="button" data-menos aria-label="Quitar uno">−</button><output>'+x.cant+'</output><button type="button" data-mas aria-label="Agregar uno">+</button></div></li>';
+    }).join("") : '<li class="vacio"><b>Tu pedido está vacío</b>Elige productos o packs y toca «Agregar».</li>';
+    document.querySelector("[data-form] button[type=submit]").disabled = !pedido.length;
   }
 
   document.querySelector("[data-form]").addEventListener("submit", function(e){
-    e.preventDefault();
-    if(!pedido.length) return;
-    var f = e.target, lineas = pedido.map(function(x){
-      return "• " + x.cant + " × " + x.nombre + [x.tam, x.aroma].filter(Boolean).map(function(s){return " – "+s;}).join("");
-    });
-    var msg = "Hola BIKARI, quiero hacer este pedido:\n\n" + lineas.join("\n");
-    if(f.nombre.value.trim()) msg += "\n\nNombre: " + f.nombre.value.trim();
-    if(f.distrito.value.trim()) msg += (f.nombre.value.trim() ? "\n" : "\n\n") + "Distrito: " + f.distrito.value.trim();
-    msg += "\n\n¿Me confirman el precio total y la entrega? Gracias.";
-    window.open(linkWsp(msg), "_blank", "noopener");
+    e.preventDefault(); if(!pedido.length) return;
+    var f=e.target;
+    var lineas = pedido.map(function(x){ return "• "+x.cant+" × "+x.nombre+(x.det?" ("+x.det+")":"")+" – "+soles(x.precio*x.cant); });
+    var msg = "Hola BIKARI, quiero hacer este pedido:\n\n"+lineas.join("\n")+"\n\nTotal a precio unitario: "+soles(total());
+    var nom=f.nombre.value.trim(), dis=f.distrito.value.trim();
+    if(nom||dis) msg += "\n";
+    if(nom) msg += "\nNombre: "+nom;
+    if(dis) msg += "\nDistrito: "+dis;
+    msg += "\n\n¿Me confirman el total (con precio por mayor si aplica) y la entrega? Gracias.";
+    window.open(linkWsp(msg),"_blank","noopener");
   });
 
   actualizar();
@@ -589,3 +621,4 @@ footer .marca img{width:56px;height:56px}
 </script>
 </body>
 </html>
+

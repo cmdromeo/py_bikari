@@ -21,7 +21,7 @@
   --cuerpo:"Figtree", system-ui, sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{margin:0;font-family:var(--cuerpo);color:var(--texto);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -48,11 +48,11 @@ h2{font-size:clamp(38px,5.6vw,64px);font-style:italic;text-transform:uppercase}
 .btn-borde:hover{background:rgba(255,255,255,.1)}
 
 /* ---------- Header ---------- */
-.top{position:sticky;top:0;z-index:40;background:var(--negro);color:#fff;border-bottom:3px solid var(--rojo)}
-.top .wrap{display:flex;align-items:center;gap:22px;height:64px}
+.top{position:sticky;top:0;z-index:40;background:#000;color:#fff;border-bottom:3px solid var(--rojo)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:76px}
 .marca{display:flex;align-items:center;gap:10px;text-decoration:none}
-.marca img{width:42px;height:42px;border-radius:8px}
-.marca span{font-family:var(--display);font-weight:900;font-style:italic;font-size:30px;letter-spacing:.02em}
+.marca img{height:68px;width:auto}
+footer .marca img{height:96px}
 .top nav{display:flex;gap:22px;margin-left:auto}
 .top nav a{text-decoration:none;font-weight:700;font-size:15px;opacity:.85}
 .top nav a:hover{opacity:1;color:var(--oro)}
@@ -191,7 +191,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 @media (max-width:900px){.contacto .grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.contacto .grid{grid-template-columns:1fr}}
 
-footer{background:var(--negro);color:#9AA0AB;padding:32px 0 110px;font-size:15px;border-top:3px solid var(--rojo)}
+footer{background:#000;color:#9AA0AB;padding:32px 0 110px;font-size:15px;border-top:3px solid var(--rojo)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
 footer p{margin:0}
 
@@ -240,7 +240,7 @@ footer p{margin:0}
 
 <header class="top">
   <div class="wrap">
-    <a class="marca" href="#inicio" aria-label="BIKARI, ir al inicio"><img src="img/logo.jpg" alt=""><span class="oro">BIKARI</span></a>
+    <a class="marca" href="#inicio"><img src="img/logo.jpg" alt="Bikari Ingeniería, ir al inicio"></a>
     <nav aria-label="Secciones">
       <a href="#ofertas">Ofertas</a>
       <a href="#hogar">Hogar</a>
@@ -368,7 +368,7 @@ footer p{margin:0}
 
 <footer>
   <div class="wrap">
-    <a class="marca" href="#inicio"><img src="img/logo.jpg" alt="BIKARI Ingeniería"><span class="oro">BIKARI</span></a>
+    <a class="marca" href="#inicio"><img src="img/logo.jpg" alt="Bikari Ingeniería"></a>
     <p>BIKARI Ingeniería · Limpieza doméstica, industrial y automotriz · Lima, Perú</p>
     <p>Precios en soles. Sujetos a confirmación al hacer tu pedido.</p>
   </div>
@@ -621,4 +621,3 @@ footer p{margin:0}
 </script>
 </body>
 </html>
-
